@@ -1,0 +1,7 @@
+
+ 0.1-1  fixed tests/foo.Rout.save which erroneously had valgrind output
+
+ 0.1-2  fixed tests/foo.Rout.save which erroneously bogus result FALSE
+        fixed src/foo.f which need double precision x(n)
+
+ 0.2    added bar.c and baz.c illustrating .C and .Call

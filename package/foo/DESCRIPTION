@@ -1,0 +1,9 @@
+Package: foo
+Version: 0.2
+Date: 2011-02-05
+Title: foo (demo)
+Author: Charles J. Geyer <charlie@stat.umn.edu>
+Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
+Depends: R (>= 2.6.0)
+Description: A demo for a class
+License: X11

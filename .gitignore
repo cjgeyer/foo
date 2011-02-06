@@ -1,0 +1,4 @@
+*.Rcheck
+*.so
+*.o
+*.tar.gz

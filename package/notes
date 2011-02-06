@@ -1,0 +1,2 @@
+\rm -f foo/src/*.{o,so}
+R CMD check foo
