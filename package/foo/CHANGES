@@ -5,3 +5,6 @@
         fixed src/foo.f which need double precision x(n)
 
  0.2    added bar.c and baz.c illustrating .C and .Call
+
+ 0.2-1  added PACKAGE argument to .C, .Fortran, and .Call
+        changed type option in tests/foo.R so all options are tried
