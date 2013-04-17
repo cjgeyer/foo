@@ -15,7 +15,9 @@ myrandom <- function(n, alpha1, alpha2, type = c("C", "Fortran")) {
     stopifnot(alpha2 > 0)
 
     if (type == "Fortran") {
-        stop("Fortran not implemented yet")
+        out <- .Fortran("quf", n = as.integer(n), alpha1 = as.double(alpha1),
+            alpha2 = as.double(alpha2), x = double(n), PACKAGE = "foo")
+        return(out$x)
     }
     if (type == "C") {
         out <- .C("qux", n = as.integer(n), alpha1 = as.double(alpha1),
