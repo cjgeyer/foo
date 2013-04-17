@@ -2,4 +2,5 @@
 useDynLib(foo)
 
 export(foo)
+export(myrandom)
 

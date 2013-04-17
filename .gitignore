@@ -2,3 +2,4 @@
 *.so
 *.o
 *.tar.gz
+symbols.rds
