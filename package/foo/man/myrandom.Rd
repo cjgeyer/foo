@@ -20,4 +20,4 @@ myrandom(n, alpha1, alpha2, type = c("C", "Fortran"))
 \examples{
 myrandom(5, pi, 1 / pi)
 }
-\keyword{misc}
+\keyword{distribution}

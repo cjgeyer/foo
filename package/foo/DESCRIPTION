@@ -6,4 +6,4 @@ Author: Charles J. Geyer <charlie@stat.umn.edu>
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
 Depends: R (>= 2.6.0)
 Description: Calling C or Fortran from R
-License: MIT + file LICENSE
+License: Unlimited

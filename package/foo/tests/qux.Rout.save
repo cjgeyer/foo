@@ -33,6 +33,20 @@ Type 'q()' to quit R.
 > identical(x1, x4) # should be FALSE
 [1] FALSE
 > 
+> .Random.seed <- save.seed
+> x5 <- myrandom(4, 1.5, 0.75, type = "Fortran")
+> .Random.seed <- save.seed
+> x6 <- myrandom(4, 1.5, 0.75, type = "Fortran")
+> x7 <- myrandom(4, 1.5, 0.75, type = "Fortran")
+> identical(x1, x5) # should be TRUE
+[1] TRUE
+> identical(x1, x6) # should be TRUE
+[1] TRUE
+> identical(x1, x7) # should be FALSE
+[1] FALSE
+> identical(x4, x7) # should be TRUE
+[1] TRUE
+> 
 > proc.time()
    user  system elapsed 
-  0.292   0.032   0.304 
+  0.304   0.028   0.312 
