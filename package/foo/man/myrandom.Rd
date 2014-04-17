@@ -5,7 +5,7 @@
    Does the same thing as \code{\link{rbeta}}.
 }
 \usage{
-myrandom(n, alpha1, alpha2, type = c("C", "Fortran"))
+myrandom(n, alpha1, alpha2, type = c("C", "Fortran", "Call"))
 }
 \arguments{
   \item{n}{integer, the number of random variates to simulate.} 

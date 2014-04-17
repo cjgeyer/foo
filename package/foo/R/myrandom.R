@@ -1,10 +1,10 @@
 
-myrandom <- function(n, alpha1, alpha2, type = c("C", "Fortran")) {
+myrandom <- function(n, alpha1, alpha2, type = c("C", "Fortran", "Call")) {
     type <- match.arg(type)
     stopifnot(is.numeric(n))
     stopifnot(length(n) == 1)
     stopifnot(n == round(n))
-    stopifnot(n > 1)
+    stopifnot(n >= 1)
     stopifnot(is.numeric(alpha1))
     stopifnot(length(alpha1) == 1)
     stopifnot(is.finite(alpha1))
@@ -23,6 +23,10 @@ myrandom <- function(n, alpha1, alpha2, type = c("C", "Fortran")) {
         out <- .C("qux", n = as.integer(n), alpha1 = as.double(alpha1),
             alpha2 = as.double(alpha2), x = double(n), PACKAGE = "foo")
         return(out$x)
+    }
+    if (type == "Call") {
+        .Call("quux", as.integer(n), as.double(alpha1),
+            as.double(alpha2), PACKAGE = "foo")
     }
 }
 

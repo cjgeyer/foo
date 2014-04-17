@@ -8,3 +8,9 @@
 
  0.2-1  added PACKAGE argument to .C, .Fortran, and .Call
         changed type option in tests/foo.R so all options are tried
+
+ 0.3    licence change to Unlimited
+
+ 0.4    added type "Call" to myrandom
+        allowed myrandom to generate just one random variate
+            (why was test ever n > 1 ????)
