@@ -47,7 +47,7 @@ Take off the `-I` (a C compiler flag) and the rest is the directory where
 all the include files are found.  Look in them for functions that have beta
 in the name.  It turns out that there are a lot of them in the file
 
- * [`Rmath.h`](https://svn.r-project.org/R/trunk/src/include/Rmath.h)
+ * [`Rmath.h`](https://svn.r-project.org/R/trunk/src/include/Rmath.h0.in)
 
 which can be found on-line or in the R source (if you have it).  We see
 function `pbeta`, `qbeta`, `dbeta`, `rbeta` that according to the comments
