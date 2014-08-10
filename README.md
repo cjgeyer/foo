@@ -31,5 +31,33 @@ the random number generators, so we write stub C functions that look like
 FORTRAN functions to FORTRAN (a C function `fred` called from FORTRAN must be
 wrapped with a macro `F77_SUB(foo)`, see [Section 6.6 of the book *Writing R Extensions*](http://cran.us.r-project.org/doc/manuals/r-release/R-exts.html#Calling-C-from-FORTRAN-and-vice-versa)).  Then we call these stub functions from
 FORTRAN and these stub functions call the correct functions from the R C API.
+These stub functions are in
 
+ * [`crandom.c`](package/foo/src/crandom.c)
+
+The other question is how does one know that the function in the R C API
+that generates beta random variates is called `rbeta`?  And how does one
+know what the arguments of this function mean?
+
+You can find all of the include files for R (the entire public API) by doing
+
+    R CMD config --cppflags
+
+Take off the `-I` (a C compiler flag) and the rest is the directory where
+all the include files are found.  Look in them for functions that have beta
+in the name.  It turns out that there are a lot of them in the file
+
+ * [`Rmath.h`](https://svn.r-project.org/R/trunk/src/include/Rmath.h)
+
+which can be found on-line or in the R source (if you have it).  We see
+function `pbeta`, `qbeta`, `dbeta`, `rbeta` that according to the comments
+in `Rmath.h` are for the beta distribution and also `pnbeta` and so forth
+that are for the noncentral beta distribution.  We probably want `rbeta`.
+So we look at the source for that
+
+ * [`rbeta.c`](https://svn.r-project.org/R/trunk/src/nmath/rbeta.c)
+
+Although it is not totally clear from the comments, it seems that the argments
+are the two shape parameters and each call returns one beta random variate.
+So that's what we need to know to use this function.
 
