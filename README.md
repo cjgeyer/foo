@@ -1,9 +1,10 @@
-This is a toy R package to serve as an example statistical confusing classes.
+This is a toy R package to serve as an example for statistical confusing
+classes.
 
 It illustrates calling C or Fortran from R.
 
 Each function that calls C from R needs both the C function and an R function
-that calls (so users don't have to know about this).  To illustrate this
+that calls it (so users don't have to know about this).  To illustrate this
 we have an R function `foo` ([package/foo/R/foo.R](package/foo/R/foo.R))
 that calls either C or FORTRAN depending on an optional argument `type`.
 The functions that it calls are
@@ -50,7 +51,7 @@ in the name.  It turns out that there are a lot of them in the file
  * [`Rmath.h`](https://svn.r-project.org/R/trunk/src/include/Rmath.h0.in)
 
 which can be found on-line or in the R source (if you have it).  We see
-function `pbeta`, `qbeta`, `dbeta`, `rbeta` that according to the comments
+functions `pbeta`, `qbeta`, `dbeta`, `rbeta` that according to the comments
 in `Rmath.h` are for the beta distribution and also `pnbeta` and so forth
 that are for the noncentral beta distribution.  We probably want `rbeta`.
 So we look at the source for that
