@@ -5,5 +5,7 @@ Title: foo (demo)
 Author: Charles J. Geyer <charlie@stat.umn.edu>
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
 Depends: R (>= 2.6.0)
-Description: Calling C or Fortran from R
+Description: A demo package for statistical computing class that illustrates
+    calling C or Fortran from R (using the R functions .C and .Call
+    and .Fortran).
 License: Unlimited
