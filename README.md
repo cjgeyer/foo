@@ -19,7 +19,7 @@ All of these functions do the same completely boring task (squaring the
 elements of a vector).  The point is just to show computation moving from R
 to C and back.
 
-It also illustrates using the R uniform and nonuniform random number
+This package also illustrates using the R uniform and nonuniform random number
 generators inside C or FORTRAN called from R.
 Again all three interfaces are illustrated
 
