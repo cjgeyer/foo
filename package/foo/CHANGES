@@ -14,3 +14,6 @@
  0.4    added type "Call" to myrandom
         allowed myrandom to generate just one random variate
             (why was test ever n > 1 ????)
+
+ 0.4-2  Fixed Title field in DESCRIPTION because R CMD check --as-cran
+            complained
