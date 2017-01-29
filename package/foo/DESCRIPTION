@@ -1,6 +1,6 @@
 Package: foo
-Version: 0.4-2
-Date: 2015-07-01
+Version: 0.5
+Date: 2017-01-29
 Title: Demo Calling C or Fortran from R
 Author: Charles J. Geyer <charlie@stat.umn.edu>
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
@@ -9,4 +9,4 @@ Description: This is a demo package for statistical computing classes
     that illustrates calling C or Fortran from R (using the R functions
     .C and .Call and .Fortran) and also calling R random number generators
     from that C or Fortran.
-License: Unlimited
+License: CC0

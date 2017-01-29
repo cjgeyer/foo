@@ -1,2 +1,3 @@
-\rm -f foo/src/*.{o,so}
-R CMD check foo
+export PKG_CFLAGS="-W -Wall -Wextra"
+R CMD build foo
+R CMD check foo_*.tar.gz
