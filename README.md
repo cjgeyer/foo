@@ -1,5 +1,5 @@
-This is a toy R package to serve as an example for statistical confusing
-classes.
+R package `foo` is a toy R package to serve as an example for statistical
+confusing classes.  (Actually now two packages, see the end of this README.)
 
 It illustrates calling C or Fortran from R.
 
@@ -61,4 +61,13 @@ So we look at the source for that
 Although it is not totally clear from the comments, it seems that the argments
 are the two shape parameters and each call returns one beta random variate.
 So that's what we need to know to use this function.
+
+R package `foo` illustrates the way you write this stuff as a beginner
+(at writing R packages, not a beginner at R).
+R package `fooRegister` illustrates the way you write this stuff as an expert.
+The difference is registration of native routines.
+Comparing the two packages shows what is required to do it the hard way
+(the expert way).  The expert way really is better, but it is not recommended
+for beginners.
+
 

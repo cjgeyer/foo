@@ -1,5 +1,5 @@
-Package: foo
-Version: 0.5
+Package: fooRegister
+Version: 0.6
 Date: 2017-02-11
 Title: Demo Calling C or Fortran from R
 Author: Charles J. Geyer <charlie@stat.umn.edu>
@@ -8,5 +8,9 @@ Depends: R (>= 2.10.0)
 Description: This is a demo package for statistical computing classes
     that illustrates calling C or Fortran from R (using the R functions
     .C and .Call and .Fortran) and also calling R random number generators
-    from that C or Fortran.
+    from that C or Fortran.  Unlike package foo, this also illustrates
+    registration (Writing R Extensions, Section 5.4).  Otherwise, everything
+    is the same as package foo, mutatis mutandis (actually nearly every file
+    in the package has some change, doing "diff -r foo fooRegister" is
+    informative).
 License: CC0

@@ -1,0 +1,6 @@
+
+useDynLib(fooRegister, .registration = TRUE, .fixes = "C_")
+
+export(foo)
+export(myrandom)
+

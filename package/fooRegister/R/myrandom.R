@@ -15,18 +15,18 @@ myrandom <- function(n, alpha1, alpha2, type = c("C", "Fortran", "Call")) {
     stopifnot(alpha2 > 0)
 
     if (type == "Fortran") {
-        out <- .Fortran("quf", n = as.integer(n), alpha1 = as.double(alpha1),
-            alpha2 = as.double(alpha2), x = double(n), PACKAGE = "foo")
+        out <- .Fortran(C_quf, n = as.integer(n), alpha1 = as.double(alpha1),
+            alpha2 = as.double(alpha2), x = double(n))
         return(out$x)
     }
     if (type == "C") {
-        out <- .C("qux", n = as.integer(n), alpha1 = as.double(alpha1),
-            alpha2 = as.double(alpha2), x = double(n), PACKAGE = "foo")
+        out <- .C(C_qux, n = as.integer(n), alpha1 = as.double(alpha1),
+            alpha2 = as.double(alpha2), x = double(n))
         return(out$x)
     }
     if (type == "Call") {
-        out <- .Call("quux", as.integer(n), as.double(alpha1),
-            as.double(alpha2), PACKAGE = "foo")
+        out <- .Call(C_quux, as.integer(n), as.double(alpha1),
+            as.double(alpha2))
         return(out)
     }
 }

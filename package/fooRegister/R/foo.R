@@ -4,15 +4,15 @@ foo <- function(x, type = c("C", "Fortran", "Call")) {
     stopifnot(is.numeric(x))
 
     if (type == "Fortran") {
-        out <- .Fortran("foo", x = as.double(x), n = length(x), PACKAGE = "foo")
+        out <- .Fortran(C_foo, x = as.double(x), n = length(x))
         return(out$x)
     }
     if (type == "C") {
-        out <- .C("bar", x = as.double(x), n = length(x), PACKAGE = "foo")
+        out <- .C(C_bar, x = as.double(x), n = length(x))
         return(out$x)
     }
     if (type == "Call") {
-        out <- .Call("baz", x = as.double(x), PACKAGE = "foo")
+        out <- .Call(C_baz, x = as.double(x))
         return(out)
     }
 }

@@ -1,3 +1,7 @@
 export PKG_CFLAGS="-W -Wall -Wextra"
+
 R CMD build foo
 R CMD check foo_*.tar.gz
+
+R CMD build fooRegister
+R CMD check fooRegister_*.tar.gz
