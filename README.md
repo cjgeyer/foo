@@ -30,7 +30,7 @@ Again all three interfaces are illustrated
 The FORTRAN one is a bit tricky because there is no R FORTRAN API for calling
 the random number generators, so we write stub C functions that look like
 FORTRAN functions to FORTRAN (a C function `fred` called from FORTRAN must be
-wrapped with a macro `F77_SUB(foo)`, see [Section 6.6 of the book *Writing R Extensions*](http://cran.us.r-project.org/doc/manuals/r-release/R-exts.html#Calling-C-from-FORTRAN-and-vice-versa)).  Then we call these stub functions from
+wrapped with a macro `F77_SUB(fred)`, see [Section 6.6 of the book *Writing R Extensions*](http://cran.us.r-project.org/doc/manuals/r-release/R-exts.html#Calling-C-from-FORTRAN-and-vice-versa)).  Then we call these stub functions from
 FORTRAN and these stub functions call the correct functions from the R C API.
 These stub functions are in
 
