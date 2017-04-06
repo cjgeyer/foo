@@ -9,7 +9,9 @@ Description: This is a demo package for statistical computing classes
     that illustrates calling C or Fortran from R (using the R functions
     .C and .Call and .Fortran) and also calling R random number generators
     from that C or Fortran.  Unlike package foo, this also illustrates
-    registration (Writing R Extensions, Section 5.4).  Otherwise, everything
+    registration (Writing R Extensions
+    <https://cran.r-project.org/doc/manuals/r-release/R-exts.html>,
+    Sections 5.4 and 6.15).  Otherwise, everything
     is the same as package foo, mutatis mutandis (actually nearly every file
     in the package has some change, doing "diff -r foo fooRegister" is
     informative).
