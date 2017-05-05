@@ -70,4 +70,6 @@ Comparing the two packages shows what is required to do it the hard way
 (the expert way).  The expert way really is better, but it is not recommended
 for beginners.
 
+CRAN package checks now complain if you do not do this registration of
+native routines as illustrated in R package `fooRegister`.
 
