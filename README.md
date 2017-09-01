@@ -1,5 +1,5 @@
-R package `foo` is a toy R package to serve as an example for statistical
-confusing classes.  (Actually now two packages, see the end of this README.)
+R package `foo` is a toy R package that serves as an example for statistical
+confusing classes.  (Actually it's now two packages.  See the end of this README.)
 
 It illustrates calling C or Fortran from R.
 
