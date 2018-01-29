@@ -63,7 +63,7 @@ functions `pbeta`, `qbeta`, `dbeta`, `rbeta` that according to the comments
 in `Rmath.h` are for the beta distribution and also `pnbeta` and so forth
 that are for the noncentral beta distribution.  We probably want `rbeta`
 (actually [Section 6.7.1 of the book *Writing R Extensions*](https://cloud.r-project.org/doc/manuals/r-release/R-exts.html#Distribution-functions) says that
-certainly ```rbeta``` is the name of the C function we want to call]).
+certainly ```rbeta``` is the name of the C function we want to call).
 So we look at the source for that
 
  * [`rbeta.c`](https://svn.r-project.org/R/trunk/src/nmath/rbeta.c)
