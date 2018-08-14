@@ -3,3 +3,4 @@
 *.o
 *.tar.gz
 symbols.rds
+*.bak
