@@ -41,7 +41,7 @@ that generates beta random variates is called `rbeta`?  And how does one
 know what the arguments of this function mean?
 
 [Section 6.3](https://cloud.r-project.org/doc/manuals/r-release/R-exts.html#Random-numbers) and
-[Section 6.7.1](https://cloud.r-project.org/doc/manuals/r-release/R-exts.html#Distribution-functions) of the book *Writing R Extensions* are the authoritive
+[Section 6.7.1](https://cloud.r-project.org/doc/manuals/r-release/R-exts.html#Distribution-functions) of the book *Writing R Extensions* are the authoritative
 documentation of the R API for random number generation and for the
 R "distribution functions" (like ```dnorm```, ```pnorm```, ```qnorm```,
 and ```rnorm``` except that "norm" can be replaced by something else,
@@ -68,7 +68,7 @@ So we look at the source for that
 
  * [`rbeta.c`](https://svn.r-project.org/R/trunk/src/nmath/rbeta.c)
 
-Although it is not totally clear from the comments, it seems that the argments
+Although it is not totally clear from the comments, it seems that the arguments
 are the two shape parameters and each call returns one beta random variate
 So that's what we need to know to use this function.
 
