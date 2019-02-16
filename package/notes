@@ -1,7 +1,17 @@
+# if any version numbers have changed
+rm -f foo*.tar.gz
+
+# the following works to turn on extra compiler flags for checking package foo
 export PKG_CFLAGS="-W -Wall -Wextra"
 
 R CMD build foo
 R CMD check foo_*.tar.gz
+
+# to turn on extra compiler flags for checking package fooRegister
+# have to do more complicated
+cp fooRegister/src/Makevars myMakevars
+# edit this file to add the compiler flags
+export R_MAKEVARS_USER=`pwd`/myMakevars
 
 R CMD build fooRegister
 R CMD check fooRegister_*.tar.gz
