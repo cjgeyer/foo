@@ -10,7 +10,7 @@ foo(x, type = c("C", "Fortran", "Call"))
 \arguments{
   \item{x}{a vector of type \code{"numeric"}.}
   \item{type}{a character string saying which foreign function call
-    interface is used.}
+    interface is used.  Can be abbreviated.}
 }
 \value{
   the vector of squares of elements of \code{x}.
