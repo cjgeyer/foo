@@ -1,5 +1,5 @@
 
-// See Sections 5.4 and 6.15 of Writing R Extensions
+// See Sections 5.4 and 6.16 of Writing R Extensions
 //
 // Remove styles, which are deprecated in R-3.3.3
 

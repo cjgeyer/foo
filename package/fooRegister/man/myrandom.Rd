@@ -12,7 +12,7 @@ myrandom(n, alpha1, alpha2, type = c("C", "Fortran", "Call"))
   \item{alpha1}{first parameter of the beta distribution.}
   \item{alpha2}{second parameter of the beta distribution.}
   \item{type}{a character string saying which foreign function call
-    interface is used.}
+    interface is used.  Can be abbreviated.}
 }
 \value{
   the vector of beta random variates.

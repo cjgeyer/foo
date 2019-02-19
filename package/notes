@@ -7,6 +7,11 @@ export PKG_CFLAGS="-W -Wall -Wextra"
 R CMD build foo
 R CMD check foo_*.tar.gz
 
+# if changes to C or Fortran code are made
+
+R CMD check foo_*.tar.gz --use-valgrind
+R CMD check foo_*.tar.gz --use-gct
+
 # to turn on extra compiler flags for checking package fooRegister
 # have to do more complicated
 cp fooRegister/src/Makevars myMakevars

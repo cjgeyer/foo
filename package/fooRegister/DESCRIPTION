@@ -11,7 +11,7 @@ Description: This is a demo package for statistical computing classes
     from that C or Fortran.  Unlike package foo, this also illustrates
     registration (Writing R Extensions
     <https://cran.r-project.org/doc/manuals/r-release/R-exts.html>,
-    Sections 5.4 and 6.15).  Otherwise, everything
+    Sections 5.4 and 6.16).  Otherwise, everything
     is the same as package foo, mutatis mutandis (actually nearly every file
     in the package has some change, doing "diff -r foo fooRegister" is
     informative).
