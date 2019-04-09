@@ -25,3 +25,24 @@
     }
 }
 
+\section{CHANGES IN fooRegister version 0.7}{
+    \itemize{
+        \item
+        Remove styles from init.c
+
+        Required for R-3.4.0 and after
+
+        None of this is user-visible.
+    }
+}
+
+\section{CHANGES IN fooRegister version 0.7-1}{
+    \itemize{
+        \item
+        Change Fortran compiler flags in Makevars
+
+        Required for R-3.6.0 and after
+
+        None of this is user-visible.
+    }
+}
