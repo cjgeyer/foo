@@ -20,3 +20,17 @@ export R_MAKEVARS_USER=`pwd`/myMakevars
 
 R CMD build fooRegister
 R CMD check fooRegister_*.tar.gz
+
+# to suppress bogus error messages about the C standard library
+# when using valgrind do the following
+export VALGRIND_OPTS=--suppressions=`pwd`/myValgrind.supp
+R CMD check foo_*.tar.gz --use-valgrind
+# or the same with fooRegister instead of foo
+# then
+grep "ERROR SUMMARY" foo.Rcheck/00check.log
+grep "ERROR SUMMARY" foo.Rcheck/foo-Ex.Rout
+grep "definitely lost:" foo.Rcheck/00check.log
+grep "definitely lost:" foo.Rcheck/foo-Ex.Rout
+# should show no errors and no definitely lost
+# (replace foo with fooRegister to check that package)
+

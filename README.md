@@ -83,3 +83,17 @@ for beginners.
 CRAN package checks now complain if you do not do this registration of
 native routines as illustrated in R package `fooRegister`.
 
+When using the argument `--use-valgrind` with `R CMD check`, for example,
+```
+R CMD check fooRegister_*.tar.gz --use-valgrind
+```
+one (as this is written) gets lots of bogus error reports about a function
+`wcsrtombs` which is in the C standard library, which according to
+`man wcsrtombs` converts a wide-character string to a multibyte string so
+this involves input/output of wide characters (Chinese, Japanese, Cyrillic,
+Arabic, and the like) and certainly has nothing to do with our packages
+in this repo or any other packages that just do computing.  So we want
+to suppress these (presumably bogus if the authors of the C standard
+library know what they are doing) error messages.  The way to suppress
+these particular messages about this particular function is explained
+in the file `package/notes`.
