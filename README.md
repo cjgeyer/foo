@@ -96,4 +96,4 @@ in this repo or any other packages that just do computing.  So we want
 to suppress these (presumably bogus if the authors of the C standard
 library know what they are doing) error messages.  The way to suppress
 these particular messages about this particular function is explained
-in the file `package/notes`.
+in the file [`package/notes`](package/notes).
