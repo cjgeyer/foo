@@ -32,5 +32,5 @@ grep "ERROR SUMMARY" foo.Rcheck/foo-Ex.Rout
 grep "definitely lost:" foo.Rcheck/00check.log
 grep "definitely lost:" foo.Rcheck/foo-Ex.Rout
 # should show no errors and no definitely lost
-# (replace foo with fooRegister to check that package)
+# (replace foo with fooRegister when checking that package)
 
