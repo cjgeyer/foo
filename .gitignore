@@ -1,6 +1,3 @@
 *.Rcheck
-*.so
-*.o
 *.tar.gz
-symbols.rds
 *.bak
