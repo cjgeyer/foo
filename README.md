@@ -83,6 +83,11 @@ for beginners.
 CRAN package checks now complain if you do not do this registration of
 native routines as illustrated in R package `fooRegister`.
 
+The following is no longer necessary and can be ignored.
+The bug in C function `wcsrtombs` (or `valgrind` or wherever) has been fixed.
+We leave this here in case there is
+a similar issue in the future.
+
 When using the argument `--use-valgrind` with `R CMD check`, for example,
 ```
 R CMD check fooRegister_*.tar.gz --use-valgrind
