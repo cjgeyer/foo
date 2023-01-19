@@ -1,6 +1,6 @@
 Package: fooRegister
-Version: 0.7-1
-Date: 2019-04-09
+Version: 0.8
+Date: 2023-01-20
 Title: Demo Calling C or Fortran from R
 Author: Charles J. Geyer <charlie@stat.umn.edu>
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>

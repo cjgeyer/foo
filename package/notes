@@ -2,14 +2,22 @@
 rm -f foo*.tar.gz
 
 # the following works to turn on extra compiler flags for checking package foo
-export PKG_CFLAGS="-W -Wall -Wextra"
+export PKG_CFLAGS="-Wall -Wextra"
 
 R CMD build foo
 R CMD check foo_*.tar.gz
 
 # if changes to C or Fortran code are made
-
 R CMD check foo_*.tar.gz --use-valgrind
+# then
+grep "ERROR SUMMARY" foo.Rcheck/00check.log
+grep "ERROR SUMMARY" foo.Rcheck/foo-Ex.Rout
+grep "definitely lost:" foo.Rcheck/00check.log
+grep "definitely lost:" foo.Rcheck/foo-Ex.Rout
+# should show no errors and no definitely lost
+
+# if changes to function that uses .Call interface are made
+# warning: quite time consuming (many minutes)
 R CMD check foo_*.tar.gz --use-gct
 
 # to turn on extra compiler flags for checking package fooRegister
@@ -17,20 +25,12 @@ R CMD check foo_*.tar.gz --use-gct
 cp fooRegister/src/Makevars myMakevars
 # edit this file to add the compiler flags
 export R_MAKEVARS_USER=`pwd`/myMakevars
+# warning: this breaks the build for R package foo
+# warning: with -Wall -Wextra get spurious warning about casts of function
+#     pointers in init.c
 
 R CMD build fooRegister
 R CMD check fooRegister_*.tar.gz
 
-# to suppress bogus error messages about the C standard library
-# when using valgrind do the following
-export VALGRIND_OPTS=--suppressions=`pwd`/myValgrind.supp
-R CMD check foo_*.tar.gz --use-valgrind
-# or the same with fooRegister instead of foo
-# then
-grep "ERROR SUMMARY" foo.Rcheck/00check.log
-grep "ERROR SUMMARY" foo.Rcheck/foo-Ex.Rout
-grep "definitely lost:" foo.Rcheck/00check.log
-grep "definitely lost:" foo.Rcheck/foo-Ex.Rout
-# should show no errors and no definitely lost
-# (replace foo with fooRegister when checking that package)
-
+# or follow above about --use-valgrind and --use-gct
+# except on R package fooRegister rather than foo

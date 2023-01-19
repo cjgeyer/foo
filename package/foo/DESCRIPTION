@@ -1,6 +1,6 @@
 Package: foo
-Version: 0.5
-Date: 2017-02-11
+Version: 0.8
+Date: 2023-01-20
 Title: Demo Calling C or Fortran from R
 Author: Charles J. Geyer <charlie@stat.umn.edu>
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
