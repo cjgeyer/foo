@@ -2,6 +2,23 @@
 \title{Foo News}
 \encoding{UTF-8}
 
+\section{CHANGES IN foo version 0.9}{
+    \itemize{
+        \item{Change author/maintainer e-mail address.}
+        \item{Update NEWS file.}
+    }
+}
+
+\section{CHANGES IN foo version 0.8}{
+    \itemize{
+        \item{Bump version number to 0.8 to match version number
+        with R package \code{fooRegister}}.
+        \item{Use C \code{switch} statement in R function \code{foo}}.
+        \item{Add a lot to README file, which is not part of the package,
+            only shows on GitHub.}
+    }
+}
+
 \section{CHANGES IN foo version 0.5}{
     \itemize{
         \item License change to CC0

@@ -1,3 +1,4 @@
 *.Rcheck
 *.tar.gz
 *.bak
+myMakevars

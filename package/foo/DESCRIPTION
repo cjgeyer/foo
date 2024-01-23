@@ -1,9 +1,9 @@
 Package: foo
-Version: 0.8
-Date: 2023-01-20
+Version: 0.9
+Date: 2024-01-23
 Title: Demo Calling C or Fortran from R
-Author: Charles J. Geyer <charlie@stat.umn.edu>
-Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
+Author: Charles J. Geyer <geyer@umn.edu>
+Maintainer: Charles J. Geyer <geyer@umn.edu>
 Depends: R (>= 3.0.2)
 Description: This is a demo package for statistical computing classes
     that illustrates calling C or Fortran from R (using the R functions

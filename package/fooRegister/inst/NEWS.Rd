@@ -2,6 +2,46 @@
 \title{FooRegister News}
 \encoding{UTF-8}
 
+\section{CHANGES IN fooRegister version 0.9}{
+    \itemize{
+        \item{Change author/maintainer e-mail address.}
+        \item{Update NEWS file.}
+    }
+}
+
+\section{CHANGES IN fooRegister version 0.8}{
+    \itemize{
+        \item{Bump version number to 0.8 to match version number
+        with R package \code{foo}}.
+        \item{Use C \code{switch} statement in R function \code{foo}}.
+        \item{Add a lot to README file, which is not part of the package,
+            only shows on GitHub.}
+    }
+}
+
+
+\section{CHANGES IN fooRegister version 0.7-1}{
+    \itemize{
+        \item
+        Change Fortran compiler flags in Makevars
+
+        Required for R-3.6.0 and after
+
+        None of this is user-visible.
+    }
+}
+
+\section{CHANGES IN fooRegister version 0.7}{
+    \itemize{
+        \item
+        Remove styles from init.c
+
+        Required for R-3.4.0 and after
+
+        None of this is user-visible.
+    }
+}
+
 \section{CHANGES IN fooRegister version 0.6}{
     \itemize{
         \item
@@ -25,24 +65,3 @@
     }
 }
 
-\section{CHANGES IN fooRegister version 0.7}{
-    \itemize{
-        \item
-        Remove styles from init.c
-
-        Required for R-3.4.0 and after
-
-        None of this is user-visible.
-    }
-}
-
-\section{CHANGES IN fooRegister version 0.7-1}{
-    \itemize{
-        \item
-        Change Fortran compiler flags in Makevars
-
-        Required for R-3.6.0 and after
-
-        None of this is user-visible.
-    }
-}
